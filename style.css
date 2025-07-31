@@ -1,67 +1,84 @@
-
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png') repeat;
-  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  background: url('wood.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 20px;
 }
 
-.card {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.96);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.box {
+  width: 100%;
   max-width: 400px;
-  width: 90%;
+  background-color: rgba(136, 104, 83, 0.45);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.overlay {
+  background-color: rgba(102, 64, 36, 0.28); /* café claro semi-transparente */
+  padding: 20px 20px 25px;
+  color: #fff;
+  text-align: center;
 }
 
 .logo {
   width: 100%;
-  max-width: 250px;
-  margin-bottom: 10px;
+  max-width: 550px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-.oficios {
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #333;
-  margin-bottom: 15px;
+.overlay h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
-.info h2 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.info p {
+.overlay p {
   margin: 5px 0;
 }
 
+.overlay h2 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .buttons {
-  margin-top: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 15px;
-  background-color: #444;
-  color: white;
+  background-image: url('wood.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 10px;
   text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #5b4431;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #222;
-}
-
-.whatsapp {
-  background-color: #25d366;
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.1);
 }
